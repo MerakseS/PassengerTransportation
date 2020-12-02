@@ -1,0 +1,13 @@
+# Build and IDE files
+.gradle
+build
+
+# Logs
+*.log
+
+# Code Style
+.idea/**
+!.idea/codeStyles/
+.idea/codeStyles/**
+!.idea/codeStyles/Project.xml
+!.idea/codeStyles/codeStyleConfig.xml
