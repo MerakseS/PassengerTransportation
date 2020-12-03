@@ -3,4 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    
+    <listener>
+        <listener-class>by.bsuir.poit.config.Listener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>Controller</servlet-name>
+        <servlet-class>by.bsuir.poit.controller.Controller</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Controller</servlet-name>
+        <url-pattern>/controller</url-pattern>
+    </servlet-mapping>
 </web-app>
