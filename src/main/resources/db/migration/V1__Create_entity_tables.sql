@@ -15,7 +15,7 @@ create table routes
     from_id   bigint      not null,
     to_id     bigint      not null,
     driver_id bigint,
-    cost      money       not null,
+    cost      numeric(2)  not null,
     date      timestamptz not null,
     primary key (id)
 );
