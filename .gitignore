@@ -13,4 +13,15 @@ build
 !.idea/codeStyles/codeStyleConfig.xml
 
 #properties
-src/main/resources/db.properties
+*/db.properties
+
+#images
+src/main/webapp/img/a1.jpg
+src/main/webapp/img/a2.jpg
+src/main/webapp/img/a3.jpg
+src/main/webapp/img/a4.jpg
+
+src/main/webapp/img/img1.jpg
+src/main/webapp/img/img2.jpg
+src/main/webapp/img/img3.jpg
+src/main/webapp/img/img4.jpg
