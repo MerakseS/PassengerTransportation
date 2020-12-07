@@ -802,7 +802,8 @@ a.b-home:hover {
 
 .content-top1 {
     position: relative;
-    min-height: 71.5em;
+    min-height: 50em;
+    /*min-height: 71.5em;*/
 }
 
 .content-top2 {

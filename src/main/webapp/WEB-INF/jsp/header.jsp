@@ -9,12 +9,12 @@
             <div class="head-nav">
                 <span class="menu"> </span>
                 <ul class="cl-effect-16">
-                    <li><a href="controller?command=home" data-hover="HOME">HOME</a></li>
-                    <li><a href="controller?command=notFound" data-hover="ORDER">ORDER</a></li>
-                    <li><a href="controller?command=notFound" data-hover="ABOUT">ABOUT</a></li>
-                    <li><a href="controller?command=notFound" data-hover="CONTACT">CONTACT</a></li>
-                    <li><a href="controller?command=notFound" data-hover="SIGN IN">SIGN IN</a></li>
-                    <li><a href="controller?command=notFound" data-hover="SIGN UP">SIGN UP</a></li>
+                    <li><a href="controller?command=home" data-hover="HOME">ДОМОЙ</a></li>
+                    <li><a href="controller?command=order" data-hover="ORDER">ЗАКАЗАТЬ</a></li>
+                    <li><a href="controller?command=about" data-hover="ABOUT">О НАС</a></li>
+                    <li><a href="controller?command=contact" data-hover="CONTACT">КОНТАКТЫ</a></li>
+                    <li><a href="controller?command=signup" data-hover="SIGN UP">РЕГИСТРАЦИЯ</a></li>
+                    <li><a href="controller?command=signin" data-hover="SIGN IN">ВХОД</a></li>
                     <div class="clearfix"></div>
                 </ul>
             </div>
