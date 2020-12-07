@@ -2,7 +2,7 @@
 <!-- footer -->
 <div class="footer">
     <div class="container">
-        <p>Copyrights © 2020 passtrans All rights reserved </p>
+        <p>Copyrights © 2020 PassTrans All rights reserved </p>
     </div>
 </div>
 <!-- footer -->

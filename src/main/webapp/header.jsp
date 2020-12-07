@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!-- header -->
 <header class="container">
     <div class="header">
@@ -10,11 +10,11 @@
                 <span class="menu"> </span>
                 <ul class="cl-effect-16">
                     <li><a href="index.jsp" data-hover="HOME">HOME</a></li>
-                    <li><a href="404.html" data-hover="ORDER">ORDER</a></li>
-                    <li><a href="404.html" data-hover="ABOUT">ABOUT</a></li>
-                    <li><a href="404.html" data-hover="CONTACT">CONTACT</a></li>
-                    <li><a href="404.html" data-hover="SIGN IN">SIGN IN</a></li>
-                    <li><a href="404.html" data-hover="SIGN UP">SIGN UP</a></li>
+                    <li><a href="404.jsp" data-hover="ORDER">ORDER</a></li>
+                    <li><a href="404.jsp" data-hover="ABOUT">ABOUT</a></li>
+                    <li><a href="404.jsp" data-hover="CONTACT">CONTACT</a></li>
+                    <li><a href="404.jsp" data-hover="SIGN IN">SIGN IN</a></li>
+                    <li><a href="404.jsp" data-hover="SIGN UP">SIGN UP</a></li>
                     <div class="clearfix"></div>
                 </ul>
             </div>
