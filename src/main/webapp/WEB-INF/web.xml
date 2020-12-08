@@ -8,6 +8,11 @@
         <listener-class>by.bsuir.poit.config.Listener</listener-class>
     </listener>
 
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/jsp/404.jsp</location>
+    </error-page>
+
     <servlet>
         <servlet-name>Controller</servlet-name>
         <servlet-class>by.bsuir.poit.controller.Controller</servlet-class>
@@ -15,6 +20,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Controller</servlet-name>
-        <url-pattern>/controller</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 </web-app>

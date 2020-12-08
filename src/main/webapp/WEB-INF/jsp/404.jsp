@@ -32,7 +32,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="error-404 text-center">
                 <h3>404</h3>
                 <p>this link dead link</p>
-                <a class="b-home" href="controller?command=home">Back to Home</a>
+                <a class="b-home" href="home">Back to Home</a>
             </div>
         </div>
     </div>

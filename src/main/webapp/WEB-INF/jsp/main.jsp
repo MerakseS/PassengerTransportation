@@ -26,7 +26,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <div class="banner-info">
             <h1>Пассажирские перевозки в Беларуси!</h1>
-            <a href="controller?command=order" class="btn  btn-1c btn1 btn-1d">Заказать</a>
+            <a href="order" class="btn  btn-1c btn1 btn-1d">Заказать</a>
         </div>
     </div>
 </div>
@@ -60,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <p>Любая поездка в другой город должна быть комфортной и не оставлять после себя тягостного
                             неприятного впечатления – вот почему мы стараемся, чтобы пассажирские перевозки в
                             НЕРЕГУЛЯРНОМ сообщении были удобными и быстрыми для всех!</p>
-                        <a href="#" class="link">Read More</a>
+                        <a href="about" class="link">Read More</a>
                     </div>
                     <div class="clearfix"></div>
                 </div>

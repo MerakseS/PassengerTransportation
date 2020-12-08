@@ -33,16 +33,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <h2>О компании</h2>
             <div class="biography">
                 <div class="biographys">
-                    <%--                    <div class="col-md-4 biography-info">--%>
-                    <%--                        <img src="images/a1.jpg" class="img-responsive" alt=""/>--%>
-                    <%--                    </div>--%>
                     <div class="col-md-8 biography-into">
                         <h4>Наша работа</h4>
                         <p>Наша основная работа &ndash; это экспресс-доставка пассажиров! Это мы делаем каждый день на
                             комфортабельных микроавтобусах вместимостью до 21 пассажирских мест. Пассажирские перевозки
                             под брендом «PassTrans» представляет собой качественный сервис по неизменно низкой стоимости
                             проезда.</p>
-                        <%--                        <a class="biography-info-right" href="#">Read More</a>--%>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -52,30 +48,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <p>Отправление каждый час и четко соблюдаемый график движения позволяет пассажирам комфортно и
                             быстро добираться. Предварительное бронирование мест в наших автобусах гарантирует
                             пассажирам отсутствие проблем в день выезда.</p>
-                        <%--                        <a class="biography-info-right" href="#">Read More</a>--%>
                     </div>
-                    <%--                    <div class="col-md-4 biography-info">--%>
-                    <%--                        <img src="images/a2.jpg" class="img-responsive" alt=""/>--%>
-                    <%--                    </div>--%>
                     <div class="clearfix"></div>
                 </div>
                 <div class="biographys">
-                    <%--                    <div class="col-md-4 biography-info">--%>
-                    <%--                        <img src="images/a3.jpg" class="img-responsive" alt=""/>--%>
-                    <%--                    </div>--%>
                     <div class="col-md-8 biography-into">
                         <h4>Наш сайт</h4>
                         <p>На нашем новом сайте мы собрали всю интересующую вас информацию! Места сбора пассажиров по
                             городам с фотографиями остановок, точное расписание выездов, фотогалерея наших автобусов,
                             новости и прочее — максимально доступно и понятно описано на нашем сайте!</p>
-<%--                        <a class="biography-info-right" href="#">Read More</a>--%>
                     </div>
                     <div class="col-md-8 biography-into">
-                        <%--                        <h4>Наш сайт</h4>--%>
                         <p>Любая поездка в другой город должна быть комфортной и не оставлять после себя тягостного
                             неприятного впечатления – вот почему мы стараемся, чтобы пассажирские перевозки
                             Новополоцк-Минск были удобными и быстрыми для всех!</p>
-<%--                        <a class="biography-info-right" href="#">Read More</a>--%>
                     </div>
                     <div class="clearfix"></div>
                 </div>

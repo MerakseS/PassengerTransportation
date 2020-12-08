@@ -8,12 +8,16 @@ import java.util.Map;
 public class CommandInvoker {
     private final Map<String, Command> commands = new HashMap<>();
 
-    private static final String HOME_COMMAND = "home";
-    private static final String NOT_FOUND_COMMAND = "notfound";
-    private static final String ABOUT_COMMAND = "about";
+    private static final String DEFAULT_COMMAND = "/";
+    private static final String HOME_COMMAND = "/home";
+    private static final String NOT_FOUND_COMMAND = "/pageNotFound";
+    private static final String ABOUT_COMMAND = "/about";
 
     public CommandInvoker() {
-        commands.put(HOME_COMMAND, new HomeCommand());
+        Command homeCommand = new HomeCommand();
+
+        commands.put(DEFAULT_COMMAND, homeCommand);
+        commands.put(HOME_COMMAND, homeCommand);
         commands.put(NOT_FOUND_COMMAND, new NotFoundCommand());
         commands.put(ABOUT_COMMAND, new AboutCommand());
     }
