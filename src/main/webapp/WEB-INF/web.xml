@@ -20,6 +20,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Controller</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/home</url-pattern>
+        <url-pattern>/about</url-pattern>
     </servlet-mapping>
 </web-app>

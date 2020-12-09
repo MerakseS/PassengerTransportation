@@ -12,7 +12,6 @@ import java.io.IOException;
 
 @WebServlet(name = "Controller")
 public class Controller extends HttpServlet {
-    private static final String COMMAND_PARAMETER = "command";
 
     CommandInvoker commandInvoker = new CommandInvoker();
 
