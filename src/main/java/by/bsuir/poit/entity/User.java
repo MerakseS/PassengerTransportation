@@ -2,7 +2,7 @@ package by.bsuir.poit.entity;
 
 import java.util.Objects;
 
-public abstract class User {
+public class User {
     protected long id;
     protected String firstName;
     protected String surname;

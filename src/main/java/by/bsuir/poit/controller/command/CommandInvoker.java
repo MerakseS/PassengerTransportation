@@ -12,6 +12,8 @@ public class CommandInvoker {
     private static final String HOME_COMMAND = "/home";
     private static final String NOT_FOUND_COMMAND = "/pageNotFound";
     private static final String ABOUT_COMMAND = "/about";
+    private static final String AUTHORIZE_COMMAND = "/authorize";
+    private static final String REGISTER_COMMAND = "/register";
 
     public CommandInvoker() {
         Command homeCommand = new HomeCommand();
@@ -20,6 +22,8 @@ public class CommandInvoker {
         commands.put(HOME_COMMAND, homeCommand);
         commands.put(NOT_FOUND_COMMAND, new NotFoundCommand());
         commands.put(ABOUT_COMMAND, new AboutCommand());
+        commands.put(REGISTER_COMMAND, new RegisterCommand());
+        commands.put(AUTHORIZE_COMMAND, new AuthorizeCommand());
     }
 
     public Command getCommand(String commandName) {

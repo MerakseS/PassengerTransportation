@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    
+
     <listener>
         <listener-class>by.bsuir.poit.config.Listener</listener-class>
     </listener>
@@ -22,5 +22,7 @@
         <servlet-name>Controller</servlet-name>
         <url-pattern>/home</url-pattern>
         <url-pattern>/about</url-pattern>
+        <url-pattern>/authorize</url-pattern>
+        <url-pattern>/register</url-pattern>
     </servlet-mapping>
 </web-app>
