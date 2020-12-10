@@ -61,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="col-md-8 biography-into">
                         <p>Любая поездка в другой город должна быть комфортной и не оставлять после себя тягостного
                             неприятного впечатления – вот почему мы стараемся, чтобы пассажирские перевозки
-                            Новополоцк-Минск были удобными и быстрыми для всех!</p>
+                            были удобными и быстрыми для всех!</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>

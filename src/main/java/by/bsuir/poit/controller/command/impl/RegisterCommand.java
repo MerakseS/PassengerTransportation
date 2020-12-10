@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class RegisterCommand implements Command {
     private static final Logger log = Logger.getLogger(RegisterCommand.class);
@@ -43,7 +44,7 @@ public class RegisterCommand implements Command {
             User user = userService.registerUser(phoneNumber, password, firstName, surname, email);
             request.setAttribute("user", user);
             page = MAIN_PAGE;
-        } catch (ServiceException e) {
+        } catch (ServiceException | SQLException e) {
             request.setAttribute("error", e.getMessage());
             page = SIGN_UP_PAGE;
         }

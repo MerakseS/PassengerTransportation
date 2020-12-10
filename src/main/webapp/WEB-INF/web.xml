@@ -24,5 +24,13 @@
         <url-pattern>/about</url-pattern>
         <url-pattern>/authorize</url-pattern>
         <url-pattern>/register</url-pattern>
+        <url-pattern>/signup</url-pattern>
     </servlet-mapping>
+
+    <resource-ref>
+        <description>postgreSQL Datasource</description>
+        <res-ref-name>jdbc/postgres</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
 </web-app>

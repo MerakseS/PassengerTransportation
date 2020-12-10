@@ -14,6 +14,7 @@ public class CommandInvoker {
     private static final String ABOUT_COMMAND = "/about";
     private static final String AUTHORIZE_COMMAND = "/authorize";
     private static final String REGISTER_COMMAND = "/register";
+    private static final String SIGN_UP_COMMAND = "/signup";
 
     public CommandInvoker() {
         Command homeCommand = new HomeCommand();
@@ -24,6 +25,7 @@ public class CommandInvoker {
         commands.put(ABOUT_COMMAND, new AboutCommand());
         commands.put(REGISTER_COMMAND, new RegisterCommand());
         commands.put(AUTHORIZE_COMMAND, new AuthorizeCommand());
+        commands.put(SIGN_UP_COMMAND, new SignUpCommand());
     }
 
     public Command getCommand(String commandName) {

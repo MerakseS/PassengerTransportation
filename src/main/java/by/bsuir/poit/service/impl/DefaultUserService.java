@@ -10,13 +10,14 @@ import org.apache.log4j.Logger;
 import javax.xml.bind.DatatypeConverter;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.sql.SQLException;
 import java.util.regex.Pattern;
 
 public class DefaultUserService implements UserService {
     private static final Logger log = Logger.getLogger(DefaultUserService.class);
 
     private static final String PHONE_PATTERN = "\\+375(33|29|44|25)[0-9]{7}";
-    private static final int MIN_PHONE_LENGTH = 3;
+    private static final int MIN_PHONE_LENGTH = 13;
 
     @Override
     public User authorizeUser(String phoneNumber, String password) {
@@ -25,7 +26,7 @@ public class DefaultUserService implements UserService {
 
     @Override
     public User registerUser(String phoneNumber, String password, String firstName,
-                             String surname, String email) throws ServiceException {
+                             String surname, String email) throws ServiceException, SQLException {
 
         if ((phoneNumber == null) || (password == null) || (firstName == null)
                 || (surname == null)) {
@@ -40,7 +41,7 @@ public class DefaultUserService implements UserService {
 
         if (phoneNumber.length() < MIN_PHONE_LENGTH) {
             log.info("Phone number \"" + phoneNumber + "\" is too short.");
-            throw new ServiceException("Логин должен быть длиннее двух символов!");
+            throw new ServiceException("Телефон должен быть длиннее " + PHONE_PATTERN + " символов!");
         }
 
         DaoProvider provider = DaoProvider.getInstance();
