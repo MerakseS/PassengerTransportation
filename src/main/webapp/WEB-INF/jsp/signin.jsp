@@ -31,26 +31,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="container">
     <div class="content-top1">
         <div class="content">
-            <h2>Регистрация</h2>
+            <h2>Вход</h2>
             <div class="biography">
                 <div class="biographys">
                     <div class="col-md-8 biography-into">
-                        <p>Уважаемый, клиент! Для пользования системой онлайн-бронирования, необходимо совершить
-                            единоразовую регистрацию на нашем сайте. Создайте свой личный кабинет и бронируйте,
-                            отменяйте места, а также смотрите историю своих поездок.</p>
-                        <form action="register" method="POST">
-                            <h4>Телефон*</h4>
+                        <p>Уважаемый, клиент! Для пользования системой онлайн-бронирования необходимо войти в свою
+                            учетную запись. Если у вас еще нет своей учётной записи, то вы можете
+                            <a href="signup">зарегестрироваться</a>. После регистрации вы сможете входить в свой личный
+                            кабинет, бронируйте и отменяйте места, а также смотрите историю своих поездок.</p>
+                        <form action="authorize" method="POST">
+                            <h4>Телефон</h4>
                             <input type="tel" name="phone" pattern="\+375(33|29|44|25)[0-9]{7}"><br><br>
-                            <h4>Имя*</h4>
-                            <input type="text" name="firstname"><br><br>
-                            <h4>Фамилия*</h4>
-                            <input type="text" name="surname"><br><br>
-                            <h4>Пароль*</h4>
+                            <h4>Пароль</h4>
                             <input type="password" name="password"><br><br>
-                            <h4>Email</h4>
-                            <input type="email" name="email"><br><br>
                             <p><c:out value="${requestScope.error}"/></p>
-                            <input class="biography-info-right" type="submit" value="Зарегистрироваться"><br><br>
+                            <input class="biography-info-right" type="submit" value="Войти"><br><br>
                         </form>
                     </div>
                 </div>

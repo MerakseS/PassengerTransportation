@@ -1,11 +1,15 @@
+create type role_type as enum ('USER', 'DRIVER', 'DISPATCHER');
+
 create table users
 (
-    id            bigserial   not null,
-    first_name    varchar(50) not null,
-    surname       varchar(50) not null,
-    phone_number  varchar(20) not null,
-    email         varchar(50) not null,
-    password_hash varchar(40) not null,
+    id        bigserial   not null,
+    phone     varchar(20) not null,
+    password  varchar(40) not null,
+    user_hash varchar(10),
+    firstname varchar(50) not null,
+    surname   varchar(50) not null,
+    email     varchar(50),
+    role      role_type   not null,
     primary key (id)
 );
 
@@ -15,6 +19,7 @@ create table routes
     from_id   bigint      not null,
     to_id     bigint      not null,
     driver_id bigint,
+    bus_id    bigint,
     cost      numeric(2)  not null,
     date      timestamptz not null,
     primary key (id)
@@ -26,28 +31,6 @@ create table user_routes
     route_id    bigint   not null,
     seats_count smallint not null,
     primary key (user_id, route_id)
-);
-
-create table clients
-(
-    id      bigserial not null,
-    user_id bigint    not null,
-    primary key (id, user_id)
-);
-
-create table dispatchers
-(
-    id      bigserial not null,
-    user_id bigint    not null,
-    primary key (id, user_id)
-);
-
-create table drivers
-(
-    id      bigserial not null,
-    user_id bigint    not null,
-    bus_id  bigint    not null,
-    primary key (id, user_id)
 );
 
 create table buses
@@ -74,10 +57,6 @@ create table cities
     primary key (id)
 );
 
-alter table routes
-    add constraint route_from_fk
-        foreign key (from_id) references stops;
-
 alter table user_routes
     add constraint user_routes_user_fk
         foreign key (user_id) references users;
@@ -85,6 +64,10 @@ alter table user_routes
 alter table user_routes
     add constraint user_routes_route_fk
         foreign key (route_id) references routes;
+
+alter table routes
+    add constraint route_from_fk
+        foreign key (from_id) references stops;
 
 alter table routes
     add constraint route_to_fk

@@ -8,7 +8,7 @@ public class Route {
     private long id;
     private String from;
     private String to;
-    private Driver driver;
+    private User driver;
     private BigDecimal cost;
     private OffsetDateTime departureDate;
 
@@ -36,11 +36,11 @@ public class Route {
         this.to = to;
     }
 
-    public Driver getDriver() {
+    public User getDriver() {
         return driver;
     }
 
-    public void setDriver(Driver driver) {
+    public void setDriver(User driver) {
         this.driver = driver;
     }
 

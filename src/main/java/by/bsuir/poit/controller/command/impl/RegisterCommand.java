@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -25,6 +26,7 @@ public class RegisterCommand implements Command {
 
     private static final String MAIN_PAGE = "home";
     private static final String SIGN_UP_PAGE = "signup";
+    private static final int MAX_AGE = 60 * 60 * 24 * 30;
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -38,17 +40,27 @@ public class RegisterCommand implements Command {
 
         ServiceProvider provider = ServiceProvider.getInstance();
         UserService userService = provider.getUserService();
-        String page;
 
         try {
             User user = userService.registerUser(phoneNumber, password, firstName, surname, email);
-            request.setAttribute("user", user);
-            page = MAIN_PAGE;
+
+            Cookie idCookie = new Cookie("id", String.valueOf(user.getId()));
+            idCookie.setMaxAge(MAX_AGE);
+            response.addCookie(idCookie);
+
+            Cookie hashCookie = new Cookie("hash", user.getHash());
+            hashCookie.setMaxAge(MAX_AGE);
+            response.addCookie(hashCookie);
+
+            response.sendRedirect(MAIN_PAGE);
+
         } catch (ServiceException | SQLException e) {
             request.setAttribute("error", e.getMessage());
-            page = SIGN_UP_PAGE;
+
+            RequestDispatcher dispatcher = request.getRequestDispatcher(SIGN_UP_PAGE);
+            dispatcher.forward(request, response);
         }
 
-        response.sendRedirect(page);
+
     }
 }

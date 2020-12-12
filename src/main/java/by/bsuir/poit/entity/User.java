@@ -3,12 +3,14 @@ package by.bsuir.poit.entity;
 import java.util.Objects;
 
 public class User {
-    protected long id;
-    protected String firstName;
-    protected String surname;
-    protected String phoneNumber;
-    protected String email;
-    protected String passwordHash;
+    private long id;
+    private String phoneNumber;
+    private String password;
+    private String hash;
+    private String firstName;
+    private String surname;
+    private String email;
+    private Role role;
 
     public long getId() {
         return id;
@@ -16,6 +18,30 @@ public class User {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getHash() {
+        return hash;
+    }
+
+    public void setHash(String hash) {
+        this.hash = hash;
     }
 
     public String getFirstName() {
@@ -34,14 +60,6 @@ public class User {
         this.surname = surname;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -50,12 +68,12 @@ public class User {
         this.email = email;
     }
 
-    public String getPasswordHash() {
-        return passwordHash;
+    public Role getRole() {
+        return role;
     }
 
-    public void setPasswordHash(String passwordHash) {
-        this.passwordHash = passwordHash;
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     @Override
@@ -64,27 +82,31 @@ public class User {
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
         return id == user.id &&
-                firstName.equals(user.firstName) &&
-                surname.equals(user.surname) &&
-                phoneNumber.equals(user.phoneNumber) &&
-                email.equals(user.email) &&
-                passwordHash.equals(user.passwordHash);
+                Objects.equals(phoneNumber, user.phoneNumber) &&
+                Objects.equals(password, user.password) &&
+                Objects.equals(hash, user.hash) &&
+                Objects.equals(firstName, user.firstName) &&
+                Objects.equals(surname, user.surname) &&
+                Objects.equals(email, user.email) &&
+                role == user.role;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, surname, phoneNumber, email, passwordHash);
+        return Objects.hash(id, phoneNumber, password, hash, firstName, surname, email, role);
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", password='" + password + '\'' +
+                ", hash='" + hash + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", surname='" + surname + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
-                ", passwordHash='" + passwordHash + '\'' +
+                ", role=" + role +
                 '}';
     }
 }

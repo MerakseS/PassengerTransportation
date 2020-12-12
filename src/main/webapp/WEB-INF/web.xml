@@ -25,6 +25,8 @@
         <url-pattern>/authorize</url-pattern>
         <url-pattern>/register</url-pattern>
         <url-pattern>/signup</url-pattern>
+        <url-pattern>/signin</url-pattern>
+        <url-pattern>/logout</url-pattern>
     </servlet-mapping>
 
     <resource-ref>

@@ -23,7 +23,7 @@ public class DatabaseProperties {
     private final String password;
 
     public DatabaseProperties() {
-        Properties properties = new Properties();
+        Properties properties = new Properties();   //TODO change getting properties
         String dbHost;
         String dbName;
         String dbUser;
