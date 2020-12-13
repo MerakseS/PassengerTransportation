@@ -47,6 +47,7 @@ public class DefaultUserService implements UserService {
         user.setHash(generateCode(10));
         userRepository.updateHash(user);
 
+        log.info("Successfully authorize user:" + user);
         return user;
     }
 
