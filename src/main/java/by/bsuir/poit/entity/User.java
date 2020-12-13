@@ -1,16 +1,17 @@
 package by.bsuir.poit.entity;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class User {
-    private long id;
-    private String phoneNumber;
-    private String password;
-    private String hash;
-    private String firstName;
-    private String surname;
-    private String email;
-    private Role role;
+public class User implements Serializable {
+    protected long id;
+    protected String phoneNumber;
+    protected String password;
+    protected String hash;
+    protected String firstName;
+    protected String surname;
+    protected String email;
+    protected Role role;
 
     public long getId() {
         return id;

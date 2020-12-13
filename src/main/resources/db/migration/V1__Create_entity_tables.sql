@@ -1,5 +1,7 @@
 create type role_type as enum ('USER', 'DRIVER', 'DISPATCHER');
 
+create type order_status_type as enum ('NOT_CONFIRMED', 'CONFIRMED', 'ATTENDED', 'ABSENT','FINISHED');
+
 create table users
 (
     id        bigserial   not null,
@@ -27,9 +29,10 @@ create table routes
 
 create table user_routes
 (
-    user_id     bigint   not null,
-    route_id    bigint   not null,
-    seats_count smallint not null,
+    user_id      bigint            not null,
+    route_id     bigint            not null,
+    order_status order_status_type not null,
+    seats_count  smallint          not null,
     primary key (user_id, route_id)
 );
 

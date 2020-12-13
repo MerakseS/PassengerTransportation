@@ -16,6 +16,7 @@ public class CommandProvider {
     private static final String SIGN_UP_COMMAND = "/signup";
     private static final String SIGN_IN_COMMAND = "/signin";
     private static final String LOGOUT_COMMAND = "/logout";
+    private static final String LOCALE_COMMAND = "/locale";
 
     public CommandProvider() {
         commands.put(HOME_COMMAND, new GoToHomeCommand());
@@ -26,6 +27,7 @@ public class CommandProvider {
         commands.put(SIGN_UP_COMMAND, new GoToSignUpCommand());
         commands.put(SIGN_IN_COMMAND, new GoToSignInCommand());
         commands.put(LOGOUT_COMMAND, new LogoutCommand());
+        commands.put(LOCALE_COMMAND, new ChangeLocaleCommand());
     }
 
     public Command getCommand(String commandName) {

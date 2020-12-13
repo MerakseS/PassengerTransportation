@@ -2,6 +2,8 @@ package by.bsuir.poit.entity;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class Route {
@@ -9,8 +11,10 @@ public class Route {
     private String from;
     private String to;
     private User driver;
+    private Bus bus;
     private BigDecimal cost;
     private OffsetDateTime departureDate;
+    private Map<User, Integer> passengers = new HashMap<>();
 
     public long getId() {
         return id;
@@ -44,6 +48,14 @@ public class Route {
         this.driver = driver;
     }
 
+    public Bus getBus() {
+        return bus;
+    }
+
+    public void setBus(Bus bus) {
+        this.bus = bus;
+    }
+
     public BigDecimal getCost() {
         return cost;
     }
@@ -60,22 +72,32 @@ public class Route {
         this.departureDate = departureDate;
     }
 
+    public Map<User, Integer> getPassengers() {
+        return passengers;
+    }
+
+    public void setPassengers(Map<User, Integer> passengers) {
+        this.passengers = passengers;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Route route = (Route) o;
         return id == route.id &&
-                from.equals(route.from) &&
-                to.equals(route.to) &&
+                Objects.equals(from, route.from) &&
+                Objects.equals(to, route.to) &&
                 Objects.equals(driver, route.driver) &&
-                cost.equals(route.cost) &&
-                departureDate.equals(route.departureDate);
+                Objects.equals(bus, route.bus) &&
+                Objects.equals(cost, route.cost) &&
+                Objects.equals(departureDate, route.departureDate) &&
+                Objects.equals(passengers, route.passengers);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, from, to, driver, cost, departureDate);
+        return Objects.hash(id, from, to, driver, bus, cost, departureDate, passengers);
     }
 
     @Override
@@ -85,8 +107,10 @@ public class Route {
                 ", from='" + from + '\'' +
                 ", to='" + to + '\'' +
                 ", driver=" + driver +
+                ", bus=" + bus +
                 ", cost=" + cost +
                 ", departureDate=" + departureDate +
+                ", passengers=" + passengers +
                 '}';
     }
 }

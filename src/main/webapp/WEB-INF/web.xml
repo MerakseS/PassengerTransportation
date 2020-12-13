@@ -27,6 +27,7 @@
         <url-pattern>/signup</url-pattern>
         <url-pattern>/signin</url-pattern>
         <url-pattern>/logout</url-pattern>
+        <url-pattern>/locale</url-pattern>
     </servlet-mapping>
 
     <resource-ref>

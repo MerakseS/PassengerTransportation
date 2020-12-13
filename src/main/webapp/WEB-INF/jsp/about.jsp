@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <html>
 <head>
     <title>PassTrans</title>
@@ -6,8 +7,6 @@
     <link href="../../css/style.css" rel="stylesheet" type="text/css" media="all"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="keywords" content="Trade Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
     <script type="application/x-javascript"> addEventListener("load", function () {
         setTimeout(hideURLbar, 0);
     }, false);
@@ -22,6 +21,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <jsp:include page="header.jsp"/>
 
+<fmt:setLocale value="${sessionScope.local}"/>
+<fmt:setBundle basename="global" var="loc"/>
+<fmt:message bundle="${loc}" key="global.about.about_company" var="about_company"/>
+<fmt:message bundle="${loc}" key="global.about.our_job" var="our_job"/>
+<fmt:message bundle="${loc}" key="global.about.our_job_paragraph" var="our_job_paragraph"/>
+<fmt:message bundle="${loc}" key="global.about.convenient_booking" var="convenient_booking"/>
+<fmt:message bundle="${loc}" key="global.about.convenient_booking_paragraph" var="convenient_booking_paragraph"/>
+<fmt:message bundle="${loc}" key="global.about.our_website" var="our_website"/>
+<fmt:message bundle="${loc}" key="global.about.our_website_first_paragraph" var="our_website_first_paragraph"/>
+<fmt:message bundle="${loc}" key="global.about.our_website_sec_paragraph" var="our_website_sec_paragraph"/>
+
 <div class="banner1">
     <div class="container">
 
@@ -30,38 +40,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="container">
     <div class="content-top1">
         <div class="content">
-            <h2>О компании</h2>
+            <h2>${about_company}</h2>
             <div class="biography">
                 <div class="biographys">
                     <div class="col-md-8 biography-into">
-                        <h4>Наша работа</h4>
-                        <p>Наша основная работа &ndash; это экспресс-доставка пассажиров! Это мы делаем каждый день на
-                            комфортабельных микроавтобусах вместимостью до 21 пассажирских мест. Пассажирские перевозки
-                            под брендом «PassTrans» представляет собой качественный сервис по неизменно низкой стоимости
-                            проезда.</p>
+                        <h4>${our_job}</h4>
+                        <p>${our_job_paragraph}</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>
                 <div class="biographys">
                     <div class="col-md-8 biography-into">
-                        <h4>Удобное бронирование</h4>
-                        <p>Отправление каждый час и четко соблюдаемый график движения позволяет пассажирам комфортно и
-                            быстро добираться. Предварительное бронирование мест в наших автобусах гарантирует
-                            пассажирам отсутствие проблем в день выезда.</p>
+                        <h4>${convenient_booking}</h4>
+                        <p>${convenient_booking_paragraph}</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>
                 <div class="biographys">
                     <div class="col-md-8 biography-into">
-                        <h4>Наш сайт</h4>
-                        <p>На нашем новом сайте мы собрали всю интересующую вас информацию! Места сбора пассажиров по
-                            городам с фотографиями остановок, точное расписание выездов, фотогалерея наших автобусов,
-                            новости и прочее — максимально доступно и понятно описано на нашем сайте!</p>
+                        <h4>${our_website}</h4>
+                        <p>${our_website_first_paragraph}</p>
                     </div>
                     <div class="col-md-8 biography-into">
-                        <p>Любая поездка в другой город должна быть комфортной и не оставлять после себя тягостного
-                            неприятного впечатления – вот почему мы стараемся, чтобы пассажирские перевозки
-                            были удобными и быстрыми для всех!</p>
+                        <p>${our_website_sec_paragraph}</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>

@@ -1,4 +1,23 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
+<fmt:setLocale value="${sessionScope.local}"/>
+<fmt:setBundle basename="global" var="loc"/>
+<fmt:message bundle="${loc}" key="global.main.all_info" var="all_info"/>
+<fmt:message bundle="${loc}" key="global.main.call_center" var="call_center"/>
+<fmt:message bundle="${loc}" key="global.main.convenient_time" var="convenient_time"/>
+<fmt:message bundle="${loc}" key="global.main.first_par" var="first_par"/>
+<fmt:message bundle="${loc}" key="global.main.free_wifi" var="free_wifi"/>
+<fmt:message bundle="${loc}" key="global.main.helpful_staff" var="helpful_staff"/>
+<fmt:message bundle="${loc}" key="global.main.modern_vehicle_fleet" var="modern_vehicle_fleet"/>
+<fmt:message bundle="${loc}" key="global.main.next_services" var="next_services"/>
+<fmt:message bundle="${loc}" key="global.main.online_order" var="online_order"/>
+<fmt:message bundle="${loc}" key="global.main.passtrans" var="passtrans"/>
+<fmt:message bundle="${loc}" key="global.main.passtrans_bel" var="passtrans_bel"/>
+<fmt:message bundle="${loc}" key="global.main.price" var="price"/>
+<fmt:message bundle="${loc}" key="global.main.sec_par" var="sec_par"/>
+<fmt:message bundle="${loc}" key="global.main.services" var="services"/>
+<fmt:message bundle="${loc}" key="global.header.order" var="order"/>
 
 <html>
 <head>
@@ -7,8 +26,6 @@
     <link href="../../css/style.css" rel="stylesheet" type="text/css" media="all"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="keywords" content="Trade Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
     <script type="application/x-javascript"> addEventListener("load", function () {
         setTimeout(hideURLbar, 0);
     }, false);
@@ -25,8 +42,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="banner">
     <div class="container">
         <div class="banner-info">
-            <h1>Пассажирские перевозки в Беларуси!</h1>
-            <a href="order" class="btn  btn-1c btn1 btn-1d">Заказать</a>
+            <h1>${passtrans_bel}</h1>
+            <a href="order" class="btn  btn-1c btn1 btn-1d">${order}</a>
         </div>
     </div>
 </div>
@@ -34,32 +51,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="content-top">
         <div class="content">
             <div class="col-md-3 lente">
-                <h4>Услуги</h4>
-                <h6>Наша компания предоставляет следующие услуги</h6>
+                <h4>${services}</h4>
+                <h6>${next_services}</h6>
                 <ul>
-                    <li><a><span> </span>Онлайн заказ</a></li>
-                    <li><a><span> </span>Колл-центр 24/7</a></li>
-                    <li><a><span> </span>Отличная цена &ndash; 10р</a></li>
-                    <li><a><span> </span>Удобное время отправления</a></li>
-                    <li><a><span> </span>Бесплатный Wi-Fi</a></li>
-                    <li><a><span> </span>Современный автопарк</a></li>
-                    <li><a><span> </span>Отзывчивый персонал</a></li>
+                    <li><a><span> </span>${online_order}</a></li>
+                    <li><a><span> </span>${call_center}</a></li>
+                    <li><a><span> </span>${price}</a></li>
+                    <li><a><span> </span>${convenient_time}</a></li>
+                    <li><a><span> </span>${free_wifi}</a></li>
+                    <li><a><span> </span>${modern_vehicle_fleet}</a></li>
+                    <li><a><span> </span>${helpful_staff}</a></li>
                 </ul>
             </div>
             <div class="col-md-8 sedtell">
-                <h3><a href="#">Пассажирские перевозки</a></h3>
-                <h5>На нашем новом сайте мы собрали всю интересующую вас информацию!</h5>
+                <h3>${passtrans}</h3>
+                <h5>${all_info}</h5>
                 <div class="sedtell-top">
                     <div class="sedtell-left">
                         <img src="../../img/bus.png" class="img-responsive" alt=""/>
                     </div>
                     <div class="sedtell-right">
-                        <p>Места сбора пассажиров по городам с фотографиями остановок, времена отправлений, фотогалерея
-                            наших автобусов, новости и прочее &ndash; максимально доступно и понятно описано на нашем
-                            сайте!</p>
-                        <p>Любая поездка в другой город должна быть комфортной и не оставлять после себя тягостного
-                            неприятного впечатления – вот почему мы стараемся, чтобы пассажирские перевозки в
-                            НЕРЕГУЛЯРНОМ сообщении были удобными и быстрыми для всех!</p>
+                        <p>${first_par}</p>
+                        <p>${sec_par}</p>
                         <a href="about" class="link">Read More</a>
                     </div>
                     <div class="clearfix"></div>
